@@ -1,2 +1,2 @@
 Results of the CTF:
-![[Pasted image 20250411223027.png]]
+<img src="Pasted image 20250411223027.png">

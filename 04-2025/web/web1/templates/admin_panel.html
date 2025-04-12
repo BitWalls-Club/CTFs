@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Admin Panel</title>
+    <style>
+        body {
+            background-color: #131518;
+            color: #fff;
+            font-family: 'Century Gothic', sans-serif;
+        }
+
+        .container {
+            max-width: 700px;
+            margin: auto;
+            padding: 2rem;
+            background: #282a2d;
+            border: 2px solid rgb(255, 132, 0);
+            border-radius: 8px;
+            box-shadow: 4px 4px 10px -4px #9339f5;
+        }
+
+        h1 {
+            text-align: center;
+            color: #9339f5;
+        }
+
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        li {
+            margin: 1rem 0;
+            font-size: 1.6rem;
+            border-bottom: 1px solid #444;
+            padding-bottom: 1rem;
+        }
+
+        .password {
+            color: #f57d7d;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Admin Panel - Staff List</h1>
+        <ul>
+            <li><b>admin</b> - Password: <span class="password">{{ passwords.admin }}</span></li>
+            <li><b>user1</b> - Password: <span class="password">{{ passwords.user1 }}</span></li>
+            <li><b>user2</b> - Password: <span class="password">{{ passwords.user2 }}</span></li>
+            <li><b>user3</b> - Password: <span class="password">{{ passwords.user3 }}</span></li>
+        </ul>
+        <hr style="margin: 2rem 0;">
+        <h2>Registered Users</h2>
+        <ul>
+            {% for user in users %}
+                <li>{{ user.username }} - {{ user.email }}</li>
+            {% endfor %}
+        </ul>
+    </div>
+</body>
+</html>

@@ -1,0 +1,76 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Edit Statistics Page</title>
+    <style>
+        body {
+            background-color: #131518;
+            font-family: Century Gothic, sans-serif;
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            padding: 40px;
+        }
+        .container {
+            background: #282a2d;
+            border: 2px solid orange;
+            border-radius: 8px;
+            padding: 20px;
+            width: 90%;
+            max-width: 900px;
+            box-shadow: 0 0 12px #9339f5;
+        }
+        textarea {
+            width: 100%;
+            height: 400px;
+            background-color: #131518;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            padding: 10px;
+            font-family: monospace;
+            font-size: 14px;
+        }
+        button {
+            margin-top: 15px;
+            width: 100%;
+            padding: 14px;
+            font-size: 18px;
+            background-color: #9339f5;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            color: white;
+        }
+        button:hover {
+            background-color: #6421eb;
+        }
+        .message {
+            margin-top: 15px;
+            padding: 10px;
+            border-radius: 5px;
+            font-weight: bold;
+        }
+        .success { background-color: #228B22; }
+        .error { background-color: #B22222; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Edit Statistics Page</h2>
+        <form method="post">
+            {% csrf_token %}
+            <textarea name="html_content">{{ html_content|safe }}</textarea>
+            <button type="submit">Save Changes</button>
+        </form>
+        {% if success_message %}
+            <div class="message success">{{ success_message }}</div>
+        {% endif %}
+        {% if error_message %}
+            <div class="message error">{{ error_message }}</div>
+        {% endif %}
+    </div>
+</body>
+</html>

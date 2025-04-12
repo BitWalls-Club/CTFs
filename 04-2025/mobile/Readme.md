@@ -28,7 +28,7 @@
     	    └── CoinDisplaySystem
     	   
    Within CoinDisplaySystem, you would encounter variables and methods responsible for the coin balance. You could either inspect the methods modifying the coin value or directly alter the class to return a required value.
-   ''photo_2''
+   <img src='./photo_2.png'>
    
 8) After applying the necessary edits:
       Go back to APK Easy Tool.
@@ -37,7 +37,7 @@
 
 9) In the main menu the button for revealing the flag would appear. 
    Copy the given string. 
-   ''photo_3''
+   <img src='photo_3.jpg'>
 
 10) Lastly, you could use tool like CyberShef to convert the hex value into the flag
-    ''photo_4''
+    <img src="photo_4.png">

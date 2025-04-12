@@ -1,0 +1,36 @@
+version: '3.8'
+
+networks:
+  vault_net:
+    driver: bridge
+    ipam:
+      config:
+        - subnet: 172.30.0.0/24
+
+services:
+  next-app:
+    build:
+      context: ./next-app
+    container_name: next-app
+    ports:
+      - "3000:3000"
+    depends_on:
+      - vault-app
+    networks:
+      vault_net:
+        ipv4_address: 172.30.0.20
+    command: >
+      sh -c "npm install &&
+             npm run build &&
+             npm start"
+
+  vault-app:
+    build:
+      context: ./vault-internal
+      dockerfile: Dockerfile
+    container_name: vault-app
+    env_file:
+      - ./vault-internal/.vault.env
+    networks:
+      vault_net:
+        ipv4_address: 172.30.0.10

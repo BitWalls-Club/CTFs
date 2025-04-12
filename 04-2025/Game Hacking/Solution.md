@@ -23,7 +23,9 @@ Browsers convert PID to HEX format in computer memory
 <img src="https://i.imgur.com/8qiaN5S.png">
 
 9. Double Click the remaining value and change it to whatever value you want (e.g. 1337)
-<img src="https://i.imgur.com/KwIGkbz.png>
+
+<img src="https://i.imgur.com/KwIGkbz.png">
+
 
 10. Collect another coin to changes take affect and you have 1338 coins
 <img src="https://i.imgur.com/eZU53rA.png">
@@ -32,7 +34,6 @@ Browsers convert PID to HEX format in computer memory
 <img src="https://i.imgur.com/O6aerce.png">
 
 Still dont get it? , watch the tutorial here https://www.youtube.com/watch?v=jfhzY7WnwbU 
-
-Tag me in our community https://t.me/root_0t4j0n,  if you need any clarification
+Tag me in our community @root_0t4j0n,  if you need any clarification
 
 
